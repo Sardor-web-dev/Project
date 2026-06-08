@@ -1,0 +1,44 @@
+{
+  "phones": [
+    {
+      "name": "Iphone 16 Pro Max",
+      "price": 1299
+    },
+    {
+      "name": "Samsung Z Flip 7",
+      "price": 999
+    },
+    {
+      "name": "Omg Poco",
+      "price": 300
+    }
+  ],
+  "furniture": [
+    {
+      "name": "Sofa Ikea",
+      "price": 900
+    },
+    {
+      "name": "Table, 12 Chairs",
+      "price": 1700
+    },
+    {
+      "name": "Furniture Desk",
+      "price": 159
+    }
+  ],
+  "fashion": [
+    {
+      "name": "Zara jacket",
+      "price": 300
+    },
+    {
+      "name": "Loro Piana Shoes",
+      "price": 499
+    },
+    {
+      "name": "Gucci Brand T-shirt",
+      "price": 225
+    }
+  ]
+}
