@@ -7,7 +7,6 @@ from aiogram.types import Message, BufferedInputFile
 
 router = Router()
 
-
 @router.message(F.text == "💳 Дисконтная карта")
 async def button_discount_card_handler(message: Message) -> None:
     user_id = str(message.from_user.id)
