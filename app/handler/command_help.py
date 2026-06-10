@@ -21,7 +21,6 @@ HELP_TEXT = """
 Если возникли проблемы свяжитесь с нашим админом @fksociety1
 """
 
-
 @router.message(F.text == "❓ Помощь")
 async def button_help_handler(message: Message) -> None:
     await message.answer(HELP_TEXT)
