@@ -13,6 +13,7 @@ from app.handler.command_help import router as help_router
 from app.handler.menu import router as menu_router
 from app.handler.card import router as card_router
 from app.handler.cart import router as cart_router
+from app.handler.products import router as products_router
 
 load_dotenv()
 TOKEN = getenv("BOT_TOKEN") or ""
@@ -21,7 +22,7 @@ setup_logger()
 logger = logging.getLogger(__name__)
 
 dp = Dispatcher(storage=MemoryStorage())
-dp.include_routers(start_router, help_router, menu_router, card_router, cart_router)
+dp.include_routers(start_router, help_router, menu_router, card_router, products_router, cart_router)
 
 async def main():
     bot = Bot(token=TOKEN)
