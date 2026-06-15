@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 dp = Dispatcher()
 dp.include_routers(start_router, help_router, menu_router, card_router, products_router)
 
-async def main():j
+async def main():
     bot = Bot(token=TOKEN)
     await dp.start_polling(bot)
 
