@@ -47,14 +47,13 @@ async def choose_category(message: Message, state: FSMContext) -> None:
     )
 
 
-@router.message(ProductBrowse.choosing_product, F.text == "⬅️ К категориям")
-async def back_to_categories(message: Message, state: FSMContext) -> None:
-    await state.set_state(ProductBrowse.choosing_category)
-    await message.answer("Выберите категорию:", reply_markup=categories_keyboard())
-
-
 @router.message(ProductBrowse.choosing_product)
 async def choose_product(message: Message, state: FSMContext) -> None:
+    if message.text == "⬅️ К категориям":
+        await state.set_state(ProductBrowse.choosing_category)
+        await message.answer("Выберите категорию:", reply_markup=categories_keyboard())
+        return
+
     data = await state.get_data()
     products = get_products(data.get("category", ""))
 
