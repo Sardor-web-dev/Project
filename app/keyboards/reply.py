@@ -10,4 +10,13 @@ def menu_builder(params: list[str] | None) -> ReplyKeyboardMarkup:
     return builder.as_markup(resize_keyboard=True)
 
 def menu_keyboard() -> ReplyKeyboardMarkup:
-    return menu_builder(["🛍 Товары", "💳 Дисконтная карта", "❓ Помощь"])
+    return menu_builder(["🛍 Товары", "💳 Дисконтная карта", "🛒 Корзина", "❓ Помощь"])
+
+
+def categories_keyboard() -> ReplyKeyboardMarkup:
+    return menu_builder(["📱 Телефоны", "🛋 Мебель", "👗 Мода", "⬅️ Главное меню"])
+
+
+def products_keyboard(product_names: list[str]) -> ReplyKeyboardMarkup:
+    return menu_builder(product_names + ["⬅️ К категориям"])
+
